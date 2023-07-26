@@ -9,8 +9,8 @@ function home() {
             <Header />
             <div className={style.content}>
                 <Desc />
-            </div>
                 <Circulo />
+            </div>
         </div>
     )
 }
