@@ -18,6 +18,20 @@
     padding-top: 40vh;
 }
 
+.desc button {
+   border: none;
+   background: transparent;
+   color: #FFF;
+   font-size: 1rem;  
+   text-transform: uppercase;
+   letter-spacing: 2.7px;
+   width: 5vw;
+}
+
+.desc button:hover{
+    cursor: pointer;
+}
+
 .desc h1 {
     color: #FFF;
     font-family: Bellefair;

@@ -8,7 +8,11 @@ function home() {
         <div className={style.homeContainer}>
             <Header />
             <div className={style.content}>
-                <Desc />
+                <Desc 
+                    title="So, you want to travel to"
+                    subtitle="Space"
+                    description="Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!"
+                />
                 <Circulo />
             </div>
         </div>
