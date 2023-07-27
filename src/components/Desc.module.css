@@ -19,9 +19,9 @@
 }
 
 .desc button {
-   border: none;
    background: transparent;
    color: #FFF;
+   border: none;
    font-size: 1rem;  
    text-transform: uppercase;
    letter-spacing: 2.7px;
@@ -30,6 +30,7 @@
 
 .desc button:hover{
     cursor: pointer;
+    border-bottom: 2px solid white;
 }
 
 .desc h1 {

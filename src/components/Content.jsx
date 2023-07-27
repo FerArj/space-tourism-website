@@ -1,11 +1,10 @@
-import img from '../assets/destination/image-moon.png'
 import style from './Content.module.css'
 
-function content (){
+function content ({image}){
     return(
         <div className={style.contentContainer}>
             <h2>Pick your destination</h2>
-            <img className={style.planet} src={img} alt="Moon" />
+            <img className={style.planet} src={image} alt="" />
         </div>
     )
 }

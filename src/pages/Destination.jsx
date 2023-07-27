@@ -5,6 +5,10 @@ import customDescContainerStyle from '../components/DescAlign.module.css'
 import customDescStyle from '../components/DescAlign.module.css'
 import Desc from '../components/Desc'
 import React, {useState} from 'react'
+import MoonImage from '../assets/destination/image-moon.png'
+import MarsImage from '../assets/destination/image-mars.png'
+import EuropaImage from '../assets/destination/image-europa.png'
+import TitanImage from '../assets/destination/image-titan.png'
 
 function Destination() {
     const [subtitle, setSubtitle] = useState("Moon");
@@ -17,6 +21,13 @@ function Destination() {
         Titan: "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn."
     }
 
+    const imageMap = {
+        Moon: MoonImage,
+        Mars: MarsImage,
+        Europa: EuropaImage,
+        Titan: TitanImage
+    }
+
     const handleButtonClick = (buttonLabel) => {
         setSubtitle(buttonLabel);
         setDescription(descriptionMap[buttonLabel]);
@@ -26,7 +37,7 @@ function Destination() {
         <div className={style.destinationContainer}>
             <Header />
             <div className={style.content}>
-                <Content />
+                <Content image={imageMap[subtitle]} />
                 <Desc 
                     buttons={[
                         { label: 'Moon', onClick: () => handleButtonClick('Moon') },
