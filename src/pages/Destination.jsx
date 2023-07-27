@@ -37,7 +37,9 @@ function Destination() {
         <div className={style.destinationContainer}>
             <Header />
             <div className={style.content}>
-                <Content image={imageMap[subtitle]} />
+                <Content 
+                    titleContent={"Pick your destination"}
+                    image={imageMap[subtitle]} />
                 <Desc 
                     buttons={[
                         { label: 'Moon', onClick: () => handleButtonClick('Moon') },
