@@ -1,11 +1,11 @@
-import style from './Content.module.css'
+import { ContentContainer } from "./style/ContentStyle";
 
 function content ({image, titleContent}){
     return(
-        <div className={style.contentContainer}>
+        <ContentContainer>
             {titleContent && <h2>{titleContent}</h2>}
-            {image && <img className={style.planet} src={image} alt="" />}
-        </div>
+            {image && <img src={image} alt="" />}
+        </ContentContainer>
     )
 }
 

@@ -1,10 +1,8 @@
 import Header from '../components/Header'
 import Content from '../components/Content'
-import style from './Destination.module.css'
-import customDescContainerStyle from '../components/DescAlign.module.css'
-import customDescStyle from '../components/DescAlign.module.css'
 import Desc from '../components/Desc'
 import React, {useState} from 'react'
+import { DestinationContainer } from './style/DestinationStyle'
 import MoonImage from '../assets/destination/image-moon.png'
 import MarsImage from '../assets/destination/image-mars.png'
 import EuropaImage from '../assets/destination/image-europa.png'
@@ -34,13 +32,13 @@ function Destination() {
     }
 
     return (
-        <div className={style.destinationContainer}>
+        <DestinationContainer>
             <Header />
-            <div className={style.content}>
+            <>
                 <Content 
                     titleContent={"Pick your destination"}
                     image={imageMap[subtitle]} />
-                <Desc 
+                <Desc
                     buttons={[
                         { label: 'Moon', onClick: () => handleButtonClick('Moon') },
                         { label: 'Mars', onClick: () => handleButtonClick('Mars') },
@@ -49,12 +47,10 @@ function Destination() {
                       ]}
                     subtitle={subtitle}
                     description={description}
-                    customDescContainer={customDescContainerStyle.descContainerPosition}
-                    customDesc={customDescStyle.descPosition}
-
+                    isDestination
                 />
-            </div>
-        </div>
+            </>
+        </DestinationContainer>
     )
 }
 

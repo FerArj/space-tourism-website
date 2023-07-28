@@ -1,14 +1,14 @@
 import { useNavigate } from 'react-router-dom'
-import style from './Circulo.module.css'
+import { ContainerCirculo } from './style/CirculoStyle';
 
 function circulo() {
 
     const navigate = useNavigate();
 
     return (
-        <div onClick={() => navigate("/destination")} className={style.containerCirculo}>
+        <ContainerCirculo onClick={() => navigate("./destination")}>
             <p>Explore</p>
-        </div>
+        </ContainerCirculo>
     )
 }
 
