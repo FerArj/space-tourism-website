@@ -1,4 +1,6 @@
-.containerCirculo{
+import styled from 'styled-components'
+
+export const ContainerCirculo = styled.div`
     background: #FFF;
     height: 28.01vh;
     width: 15.01vw;
@@ -12,12 +14,11 @@
     margin-top: 55vh;
     margin-left: 30vw;
     cursor: pointer;
-}
-
-.containerCirculo p{
-    font-family: Bellefair;
-    color: #0B0D17;
-    font-size: 2em;
-    letter-spacing: 2px;
-    font-style: normal;
-}
+    & p{
+        font-family: Bellefair;
+        color: #0B0D17;
+        font-size: 2em;
+        letter-spacing: 2px;
+        font-style: normal;
+    }
+`
